@@ -491,4 +491,5 @@ class BasePost extends Model
         $this->deleteFeatureImage();
     }
     
+    
 }

@@ -1,0 +1,44 @@
+User-agent: Googlebot
+Disallow: /index.php/
+Disallow: /ajax/
+Disallow: /ajax/*
+Disallow: /*?*search=
+Disallow: /*?*s=
+Disallow: /*?*keyword=
+Disallow: /*?*keywords=
+Disallow: /*?*sorttype=
+Disallow: /collections?*category=
+Disallow: /collections?*categories=
+Disallow: /collections?*collection=
+Disallow: /collections?*collections=
+Disallow: /collections?*label=
+Disallow: /collections?*in_any_label=
+Disallow: /collections?*labels=
+Disallow: /collections?*product_*=
+Disallow: /collections?*sorttype=
+Disallow: /cate/
+Disallow: products/*.json
+Disallow: products/detail/*
+Disallow: products/kiem-tra-gia        
+Disallow: products/danh-gia
+Disallow: products/gui-danh-gia-bang-ajax
+Disallow: dang-nhap.html
+Disallow: dang-nhap
+Disallow: quen-mat-khau.html
+Disallow: quen-mat-khau
+Disallow: cfp-token/*
+Disallow: dat-lai-mat-khau.html
+Disallow: dang-ky.html
+Disallow: dang-ky
+Disallow: xac-minh-tai-khoan.html
+Disallow: gui-email-xac-minh
+Disallow: verify-email/*
+Disallow: dang-xuat
+
+
+Disallow: /*?*order=
+Disallow: /*?*p=
+
+User-agent: *
+Allow: /
+Sitemap: http://wisestyle/sitemap.xml

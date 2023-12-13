@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+define("BASE_PATH", dirname(__FILE__));
+$corePath = BASE_PATH . '/vendor/gomeetech/core';
+if (!file_exists($helper = $corePath . '/src/helpers/utils.php'))
+    die("\nGomee library was not required!\n\nPlease run:\n\n    composer require gomeetech/core\n\n");
+
+
+include $helper;
+
+require_once $corePath . '/src/dev/load.php';
+
+__call__($argv);

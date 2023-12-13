@@ -1,0 +1,16 @@
+{
+    "list": {
+        "sortby": {
+            "1": "Tên sản phẩm (A-Z)",
+            "2": "Tên sản phẩm (Z-A)",
+            "3": "Giá (rẻ nhất - dắt nhất)",
+            "4": "Giá (đắt nhất - rẻ nhất)",
+            "5": "Ngẫu nhiên"
+        },
+        "tabs": {
+            "all": "Tất cả sản phẩm",
+            "best-sales": "Bán chạy nhất",
+            "collection": "Bộ sư tập"
+        }
+    }
+}

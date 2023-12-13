@@ -1,0 +1,71 @@
+{
+    "name": "Mẩu Style Set",
+    "package": "style-sets.personal.templates",
+    "use_trash": false,
+    "titles": {
+        "default": "Danh sách Mẩu Style Set",
+        "trash": "Danh sách Mẩu Style Set đã xóa"
+    },
+    "data": [],
+    "filter": {
+        "search_columns": {
+            "name": "Tên Mẩu"
+        },
+        "sort_columns": {
+            "name": "Tên Mẩu"
+        }
+    },
+    "table": {
+        "class": "header-left",
+        "columns": [
+            {
+                "type": "order",
+                "title": "STT",
+                "class": "check-col",
+                "order": 1
+            },
+            {
+                "title": "Avatar",
+                "class": "max-100",
+                "template": "<a href=\"{@route}\"><img src=\"{@getAvatar}\" class=\"image-thumbnail\" alt=\"{name}\"></a>",
+                "data": {
+                    "@route": [
+                        ".detail",
+                        {
+                            "id": ":id"
+                        }
+                    ],
+                    "@getAvatar": []
+                }
+            },
+            {
+                "title": "Tên mẩu",
+                "class": "",
+                "template": "<a href=\"{@route}\">{name}</a>",
+                "data": {
+                    "@route": [
+                        ".detail",
+                        {
+                            "id": ":id"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Kích thước",
+                "class": "",
+                "template": "{width}x{height}"
+            }
+        ]
+    },
+    "includes":{
+        "templates": ["style-set-template-form-modal"]
+    },
+    "resources": {
+        "js_data": [],
+        "js": [
+            "static/features/style-template/script.js"
+        ],
+        "css": []
+    }
+}

@@ -1,0 +1,1 @@
+<?php echo $body; ?><?php /**PATH /Users/doanln/Desktop/Gomee/wisestyle/resources/views/mails/queue.blade.php ENDPATH**/ ?>

@@ -1,0 +1,119 @@
+{
+    "inputs": {
+        "random_number":{
+            "type": "hidden"
+        },
+        "order_code": {
+            "type": "crazyselect",
+            "template": "crazyselect",
+            "label": "Đơn hàng",
+            "call": "get_order_transaction_options",
+            "params": [
+                {
+                    "id": "#random_number"
+                },
+                "code"
+
+            ],
+            "@select-type": "search",
+            "@search-params": ".crazy-form #category_id",
+            "@search-route": "admin.orders.select-options",
+            "required": "true"
+        },
+        "type": {
+            "type": "radio",
+            "label": "Loại giao dịch",
+            "data": {
+                "payment": "Thanh toán đơn hàng",
+                "refund": "Hoàn tiền",
+                "othoe": "Khác"
+            },
+            "default": "payment",
+            "required": "true"
+        },
+        "customer_id": {
+            "type": "crazyselect",
+            "template": "crazyselect",
+            "label": "Khách hàng",
+            "call": "get_customer_select_options",
+            "params": [
+                {
+                    "id": ":defval"
+                }
+            ],
+            "@select-type": "search",
+            "@search-route": "admin.customers.select-options",
+            "@change": "Transaction.order.changeCustomer",
+            "required": "true"
+        },
+        "code": {
+            "type": "text",
+            "label": "Mã giao dịch",
+            "placeholder": "Nhập Mã giao dịch",
+            "required": "true"
+        },
+        "amount": {
+            "type": "number",
+            "label": "Số tiền",
+            "placeholder": "Nhập Số tiền",
+            "min": 0,
+            "required": "true",
+            "append_text":"VNĐ"
+        },
+        "image": {
+            "type": "file",
+            "label": "Biên lai",
+            "accept": "image/png,image/jpeg,image/gif"
+        },
+        "note": {
+            "type": "textarea",
+            "label": "Ghi chú",
+            "placeholder": "Nhập Ghi chú"
+        },
+        "time": {
+            "type": "text",
+            "label": "Thời gian",
+            "placeholder": "Nhập thời gian",
+            "template": "time",
+            "data-format": "yyyy-mm-dd HH:ii"
+        },
+        "status": {
+            "type": "select",
+            "label": "Trạng thái",
+            "data": {"1": "Đã duyệt", "0": "Đang chờ", "-1": "Bị từ chôi"},
+            "default": "0"
+        }
+    },
+    "config": {
+        "name": "Giao dịch với đơn hàng",
+        "layout_type": "column",
+        "form_groups": {
+            "transaction_info": {
+                "title": "Thông tin giao dịch",
+                "class": "col-md-6",
+                "inputs": [
+                    "code",
+                    "amount",
+                    "image",
+                    "time"
+                ]
+            },
+            "order_info": {
+                "title": "Thông tin bổ xung",
+                "class": "col-md-6",
+                "inputs": [
+                    "random_number",
+                    "customer_id",
+                    "order_code",
+                    "type",
+                    "status",
+                    "note"
+                ]
+            }
+        },
+        "assets": {
+            "js": [],
+            "css": []
+        }
+    }
+}

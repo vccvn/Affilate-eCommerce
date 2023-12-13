@@ -1,6 +1,0 @@
-{
-    "extends": "base",
-    "data": {
-        "@modules": ["profile", "projects", "clients"]
-    }
-}

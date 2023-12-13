@@ -1,9 +1,0 @@
-{
-    "name": "About Page: Masonry Section",
-    "inputs": {
-        "title": {
-            "type": "text",
-            "label": "Tiêu đề"
-        }
-    }
-}

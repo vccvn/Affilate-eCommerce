@@ -1,0 +1,89 @@
+{
+    "name": "Màu da",
+    "package": "customer-centric-data.skin-colors",
+    "use_trash": false,
+    "titles": {
+        "default": "Danh sách Màu da",
+        "trash": "Danh sách Màu da đã xóa"
+    },
+    "data": [],
+    "filter": {
+        "general_columns": {
+            "name": "Tên"
+        },
+        "search_columns": [],
+        "sort_columns": {
+            "id": "ID"
+        }
+    },
+    "table": {
+        "class": "",
+        "columns": [
+            {
+                "type": "order",
+                "title": "STT",
+                "class": "id-col text-cemter",
+                "order": 1
+            },
+            {
+                "title": "Màu",
+                "class": "thumbnail-col",
+                "template": "<a href=\"{@route}\" style=\"display:inline-block;width:30px; height:30px; background:{color}; border-radius: 5px;\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUGFdjYAACAAAFAAGq1chRAAAAAElFTkSuQmCC\" class=\"image-thumbnail\" with=\"30\" height=\"30\" alt=\"{color}\"></a>",
+                "data": {
+                    "@route": [
+                        ".update",
+                        {
+                            "id": ":id"
+                        }
+                    ]
+
+                }
+            },
+            {
+                "title": "Ảnh",
+                "class": "thumbnail-col",
+                "template": "<a href=\"{@route}\"><img src=\"{@getThumbnail}\" class=\"image-thumbnail\" alt=\"{name}\"></a>",
+                "data": {
+                    "@route": [
+                        ".update",
+                        {
+                            "id": ":id"
+                        }
+                    ],
+                    "@getThumbnail": []
+                }
+            },
+            {
+                "title": "Tên màu",
+                "class": "",
+                "template": "<a href=\"{@route}\">{name}</a>",
+                "data": {
+                    "@route": [
+                        ".update",
+                        {
+                            "id": ":id"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Mô tả",
+                "class": "desc-wrapper max-200",
+                "template": "<span class=\"full\">{@htmlentities}</span><span class=\"short\">{@getShortDesc}</span><a href=\"javascript:void(0);\" class=\"btn-toggle-desc\">Xem thêm</a>",
+                "data": {
+                    "@htmlentities": [
+                        ":description"
+                    ],
+                    "@getShortDesc": [
+                        120
+                    ]
+                }
+            }
+        ]
+    },
+    "resources": {
+        "js_data": [],
+        "js": [],
+        "css": []
+    }
+}

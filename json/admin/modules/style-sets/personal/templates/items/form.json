@@ -1,0 +1,37 @@
+{
+    "template_item_config_id": {
+        "type": "hidden"
+    },
+    
+    "name": {
+        "type": "text",
+        "label": "Tên item",
+        "placeholder": "Nhập tên item"
+    },
+    "front_image_id": {
+        "type": "media",
+        "label": "Ảnh phía trước"
+    },
+    "back_image_id": {
+        "type": "media",
+        "label": "Ảnh tổng thể"
+    },
+    "tags": {
+        "type": "crazytag",
+        "label": "Thẻ",
+        "placeholder": "Nhập thẻ...",
+        "template": "crazytag",
+        "@type": "dynamic",
+        "@search-route": "admin.tags.data",
+        "@create-route": "admin.tags.create",
+        "@create-field": "tags",
+        "call": "get_input_tag_data",
+        "params": [
+            "PS-TEMP-ITEM",
+            "#hidden_id",
+            {
+                "id": ":defval"
+            }
+        ]
+    }
+}

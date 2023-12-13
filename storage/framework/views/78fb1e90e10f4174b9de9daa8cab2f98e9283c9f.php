@@ -1,0 +1,1 @@
+<?php /**PATH /Users/doanln/Desktop/VCC Corp/mien-atelier/resources/views/admin/_components/quick-nav.blade.php ENDPATH**/ ?>

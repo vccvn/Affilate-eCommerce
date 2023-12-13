@@ -1,0 +1,67 @@
+{
+    "name": "Style Set",
+    "package": "style-sets",
+    "use_trash": true,
+    "titles": {
+        "default": "Danh sách Style Set",
+        "trash": "Danh sách Style Set đã xóa"
+    },
+    "data": [],
+    "filter": {
+        "search_columns": [],
+        "sort_columns": []
+    },
+    "table": {
+        "class": "headercenter",
+        "columns": [
+            {
+                "type": "order",
+                "title": "STT",
+                "class": "id-col order-col",
+                "order": 1
+            },
+            {
+                "title":"Ảnh",
+                "class":"text-center",
+                "template":"<a href=\"{@route}\"><img src=\"{@getFeaturedImage}\" class=\"image-thumbnail\" alt=\"{name}\"></a>",
+                "data":{
+                    "@route": [".update", {"id": ":id"}],
+                    "@getFeaturedImage":[]
+                }
+            },
+            {
+                "title": "Tên set",
+                "class": "",
+                "text": ":name"
+            },
+            {
+                "title": "Mô tả",
+                "class": "desc-wrapper max-200",
+                "template": "<span class=\"full\">{@htmlentities}</span><span class=\"short\">{@getShortDesc}</span><a href=\"javascript:void(0);\" class=\"btn-toggle-desc\">Xem thêm</a>",
+                "data":{
+                    "@htmlentities": [":description"],
+                    "@getShortDesc":[120]
+                }
+            },
+            
+            {
+                "title": "Sản phẩm",
+                "class": "max-150",
+                "template": "<div class=\"product-items\">{@renderItems}</div>",
+                "data":{
+                    "@renderItems": [
+                        "<div class=\"product-item d-flex no-guide\"><div class=\"mr-5px\"><img src=\"{image}\"></div><div class=\"\"><div class=\"product-name\"><span class=\"product-quantity mr-2\">+ {quantity} </span>{product_name}</div></div></div>"
+                    ]
+                }
+            }
+            
+        ]
+    },
+    "resources": {
+        "js_data": [],
+        "js": [],
+        "css": [
+            "static/features/style-sets/style.css"
+        ]
+    }
+}

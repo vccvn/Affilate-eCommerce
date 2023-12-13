@@ -1,0 +1,30 @@
+.style-set-config{
+    .style-set-config-preview{
+        width: 340px;
+        height: 500px;
+        margin: 0 auto;
+        background-color: rgb(226, 226, 226);
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+    .style-item-config{
+        position: absolute;
+        background: rgba($color: #ffbc20, $alpha: 0.6);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+
+
+
+    }
+
+    $orderBg: 1 #20adff, 2 #ff3620, 3 #26ff00, 4 #7920ff, 5 #ff20cb, 6 #2420ff, 7 #823a0a;
+    @each $nth, $col in $orderBg {
+        .style-item-config:nth-child(#{$nth}){
+            background: rgba($color: $col , $alpha: 0.6);
+        }
+    }
+}
